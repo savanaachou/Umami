@@ -11,6 +11,7 @@ public class Game : MonoBehaviour
     {
         uiManager.ShowStartScreen();
         uiManager.HideGameScreen();
+        // uiManager.HidePauseScreen();
     }
     
     public void StartGame()
