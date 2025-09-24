@@ -2,15 +2,30 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    
+    public CanvasGroup startScreenCanvasGroup;
+    public CanvasGroup gameScreenCanvasGroup;
+    
+    // show start screen (hides all other screens)\
+    public void ShowStartScreen()
     {
-        
+        CanvasGroupDisplayer.Show(startScreenCanvasGroup);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ShowGameScreen()
     {
-        
+        CanvasGroupDisplayer.Show(gameScreenCanvasGroup);
     }
+    
+    public void HideStartScreen()
+    {
+        CanvasGroupDisplayer.Hide(startScreenCanvasGroup);
+    }
+    
+    public void HideGameScreen()
+    {
+        CanvasGroupDisplayer.Hide(gameScreenCanvasGroup);
+    }
+
+    
 }
