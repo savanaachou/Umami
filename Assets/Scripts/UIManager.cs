@@ -2,41 +2,54 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    
     public CanvasGroup startScreenCanvasGroup;
     public CanvasGroup gameScreenCanvasGroup;
     public CanvasGroup pauseScreenCanvasGroup;
-    
-    // show start screen (hides all other screens)\
-    public void ShowStartScreen()
+    public CanvasGroup cookingScreenCanvasGroup;
+    public CanvasGroup servingScreenCanvasGroup;
+    public CanvasGroup outsideScreenCanvasGroup;
+
+    private CanvasGroup[] allScreens;
+
+    void Awake()
     {
-        CanvasGroupDisplayer.Show(startScreenCanvasGroup);
+        // Store all screens for easy iteration
+        allScreens = new CanvasGroup[] {
+            startScreenCanvasGroup,
+            gameScreenCanvasGroup,
+            pauseScreenCanvasGroup,
+            cookingScreenCanvasGroup,
+            servingScreenCanvasGroup,
+            outsideScreenCanvasGroup
+        };
     }
 
-    public void ShowGameScreen()
+    // Hides all screens, then shows the one passed in.
+    public void ShowOnly(CanvasGroup screenToShow)
     {
-        CanvasGroupDisplayer.Show(gameScreenCanvasGroup);
+        foreach (var screen in allScreens)
+        {
+            if (screen != null)
+                CanvasGroupDisplayer.Hide(screen);
+        }
+
+        if (screenToShow != null)
+            CanvasGroupDisplayer.Show(screenToShow);
     }
 
-    public void ShowPauseScreen()
-    {
-        CanvasGroupDisplayer.Show(pauseScreenCanvasGroup);
-    }
-    
-    public void HideStartScreen()
-    {
-        CanvasGroupDisplayer.Hide(startScreenCanvasGroup);
-    }
-    
-    public void HideGameScreen()
-    {
-        CanvasGroupDisplayer.Hide(gameScreenCanvasGroup);
-    }
+    // Convenience Show Methods
+    public void ShowStartScreen() => ShowOnly(startScreenCanvasGroup);
+    public void ShowGameScreen() => ShowOnly(gameScreenCanvasGroup);
+    public void ShowPauseScreen() => ShowOnly(pauseScreenCanvasGroup);
+    public void ShowCookingScreen() => ShowOnly(cookingScreenCanvasGroup);
+    public void ShowServingScreen() => ShowOnly(servingScreenCanvasGroup);
+    public void ShowOutsideScreen() => ShowOnly(outsideScreenCanvasGroup);
 
-    public void HidePauseScreen()
-    {
-        CanvasGroupDisplayer.Hide(pauseScreenCanvasGroup);
-    }
-
-    
+    // Hide Methods (for buttons etc.)
+    public void HideStartScreen() => CanvasGroupDisplayer.Hide(startScreenCanvasGroup);
+    public void HideGameScreen() => CanvasGroupDisplayer.Hide(gameScreenCanvasGroup);
+    public void HidePauseScreen() => CanvasGroupDisplayer.Hide(pauseScreenCanvasGroup);
+    public void HideCookingScreen() => CanvasGroupDisplayer.Hide(cookingScreenCanvasGroup);
+    public void HideServingScreen() => CanvasGroupDisplayer.Hide(servingScreenCanvasGroup);
+    public void HideOutsideScreen() => CanvasGroupDisplayer.Hide(outsideScreenCanvasGroup);
 }
