@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerInput))]
 public class PlayerInteraction : MonoBehaviour
 {
-    public UIManager uiManager;
+    public SceneUIManager sceneUiManager;
     private PlayerInput input;
     private string currentZone = "";
 
@@ -14,7 +14,7 @@ public class PlayerInteraction : MonoBehaviour
 
     void Update()
     {
-        bool isInputAllowed = !(PauseManager.Instance?.IsPaused ?? false) && !(uiManager?.IsOnStartScreen ?? false);
+        bool isInputAllowed = !(PauseManager.Instance?.IsPaused ?? false) && !(sceneUiManager?.IsOnStartScreen ?? false);
 
         if (!isInputAllowed)
             return;
@@ -27,19 +27,31 @@ public class PlayerInteraction : MonoBehaviour
 
     void EnterZone(string zone)
     {
+        // Save player’s current position before leaving MainScene
+        if (zone != "Main") // only if we’re leaving Main
+        {
+            var player = FindObjectOfType<PlayerMovement>();
+            if (player != null)
+            {
+                PlayerData.LastPosition = player.transform.position;
+                PlayerData.HasSavedPosition = true;
+            }
+        }
+
         switch(zone)
         {
             case "Cooking":
-                uiManager.LoadCookingScene();
+                sceneUiManager.LoadCookingScene();
                 break;
             case "Serving":
-                uiManager.LoadServingScene();
+                sceneUiManager.LoadServingScene();
                 break;
             case "Exit":
-                uiManager.LoadOutsideScene();
+                sceneUiManager.LoadOutsideScene();
                 break;
         }
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

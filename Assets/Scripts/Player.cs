@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerInput), typeof(PlayerMovement), typeof(PlayerInteraction))]
 public class Player : MonoBehaviour
 {
-    public UIManager uiManager;
+    public SceneUIManager sceneUiManager;
 
     private PlayerInput input;
     private PlayerMovement movement;
@@ -16,6 +16,6 @@ public class Player : MonoBehaviour
         interaction = GetComponent<PlayerInteraction>();
 
         // Pass references down if needed
-        interaction.uiManager = uiManager;
+        interaction.sceneUiManager = sceneUiManager;
     }
 }

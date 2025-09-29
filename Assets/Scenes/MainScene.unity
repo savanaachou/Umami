@@ -1266,7 +1266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4931fbb05f29c204c9509f932c391f48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  uiManager: {fileID: 493636353}
+  sceneUiManager: {fileID: 493636353}
 --- !u!61 &1009290119
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1352,7 +1352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eba874c18d706fb4f92118cda99d15d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInteraction
-  uiManager: {fileID: 493636353}
+  sceneUiManager: {fileID: 493636353}
 --- !u!114 &1009290122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1882,7 +1882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79612a4a24330f409a83cfc2d9e01db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Game
-  uiManager: {fileID: 493636353}
+  sceneUiManager: {fileID: 493636353}
 --- !u!4 &1492139161
 Transform:
   m_ObjectHideFlags: 0

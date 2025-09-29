@@ -32,7 +32,7 @@ public class PauseManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             // Block pause if start screen is active
-            UIManager uiManager = FindObjectOfType<UIManager>();
+            SceneUIManager uiManager = FindObjectOfType<SceneUIManager>();
             if (uiManager != null && uiManager.IsOnStartScreen)
                 return;
 

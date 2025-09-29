@@ -11,13 +11,19 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         input = GetComponent<PlayerInput>();
+
+        if (PlayerData.HasSavedPosition)
+        {
+            transform.position = PlayerData.LastPosition;
+        }
     }
+
 
     void FixedUpdate()
     {
         // Determine if player input should be active
         bool isActive = !(PauseManager.Instance != null && PauseManager.Instance.IsPaused)
-                        && !(FindObjectOfType<UIManager>()?.IsOnStartScreen ?? false);
+                        && !(FindObjectOfType<SceneUIManager>()?.IsOnStartScreen ?? false);
 
         if (!isActive)
         {
