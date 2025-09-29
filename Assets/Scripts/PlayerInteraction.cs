@@ -4,7 +4,6 @@ using UnityEngine;
 public class PlayerInteraction : MonoBehaviour
 {
     public UIManager uiManager;
-
     private PlayerInput input;
     private string currentZone = "";
 
@@ -15,6 +14,11 @@ public class PlayerInteraction : MonoBehaviour
 
     void Update()
     {
+        bool isInputAllowed = !(PauseManager.Instance?.IsPaused ?? false) && !(uiManager?.IsOnStartScreen ?? false);
+
+        if (!isInputAllowed)
+            return;
+
         if (input.InteractPressed && currentZone != "")
         {
             EnterZone(currentZone);
@@ -26,16 +30,13 @@ public class PlayerInteraction : MonoBehaviour
         switch(zone)
         {
             case "Cooking":
-                Debug.Log("Entering Cooking Area!");
-                uiManager.ShowCookingScreen();
+                uiManager.LoadCookingScene();
                 break;
             case "Serving":
-                Debug.Log("Talking to Customers!");
-                uiManager.ShowServingScreen();
+                uiManager.LoadServingScene();
                 break;
             case "Exit":
-                Debug.Log("Exiting Shop!");
-                uiManager.ShowOutsideScreen();
+                uiManager.LoadOutsideScene();
                 break;
         }
     }

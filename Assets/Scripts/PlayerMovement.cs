@@ -15,6 +15,17 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        // Determine if player input should be active
+        bool isActive = !(PauseManager.Instance != null && PauseManager.Instance.IsPaused)
+                        && !(FindObjectOfType<UIManager>()?.IsOnStartScreen ?? false);
+
+        if (!isActive)
+        {
+            // Stop movement completely
+            rb.linearVelocity = Vector2.zero;
+            return;
+        }
+
         rb.linearVelocity = new Vector2(input.MoveInput * moveSpeed, rb.linearVelocity.y);
     }
 }

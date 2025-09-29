@@ -6,13 +6,11 @@ public class Game : MonoBehaviour
 
     void Start()
     {
-        // Only the start screen should show at launch
         uiManager.ShowStartScreen();
     }
 
     public void StartGame()
     {
-        // Switch from start screen to game screen
         uiManager.HideStartScreen();
         Debug.Log("Game Started");
     }
