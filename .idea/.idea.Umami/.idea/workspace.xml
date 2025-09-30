@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a56fd74c-240c-4927-867f-9e2d246ac5a8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Umami/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Umami/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CookingScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CookingScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/OutsideScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/OutsideScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/OutsideScene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/OutsideScene.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ServingScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ServingScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ServingScene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ServingScene.unity.meta" afterDir="false" />
-    </list>
+    <list default="true" id="a56fd74c-240c-4927-867f-9e2d246ac5a8" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,7 +31,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/CookingScene.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/sacho/Desktop/Unity Projects/Umami/ProjectSettings/EditorBuildSettings.asset" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -146,6 +138,7 @@
       <workItem from="1758785630908" duration="2032000" />
       <workItem from="1758838965778" duration="4253000" />
       <workItem from="1759099308565" duration="15216000" />
+      <workItem from="1759216229424" duration="310000" />
     </task>
     <task id="LOCAL-00001" summary="initial push">
       <option name="closed" value="true" />
@@ -227,7 +220,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759122910156</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="added bowl in cooking scene">
+      <option name="closed" value="true" />
+      <created>1759216395053</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1759216395053</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,7 +265,8 @@
     <MESSAGE value="fixed panel issue aand refactored code to be better" />
     <MESSAGE value="implemented different scenes instead of panels, implemented pause screen which actually works!" />
     <MESSAGE value="save players location when changing scene, worked on back button for cooking scene" />
-    <option name="LAST_COMMIT_MESSAGE" value="save players location when changing scene, worked on back button for cooking scene" />
+    <MESSAGE value="added bowl in cooking scene" />
+    <option name="LAST_COMMIT_MESSAGE" value="added bowl in cooking scene" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
