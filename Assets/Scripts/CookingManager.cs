@@ -62,7 +62,30 @@ public class CookingManager : MonoBehaviour
                 {
                     SnapIngredient(ingredient);
                     Debug.Log("Topping added!");
-                    return true; // Multiple toppings allowed
+
+                    // ✅ Only mark the order complete if the player actually has an order
+                    if (currentStep != RamenStep.Completed)
+                    {
+                        currentStep = RamenStep.Completed;
+
+                        if (OrderManager.Instance != null)
+                        {
+                            if (OrderManager.Instance.HasActiveOrder)
+                            {
+                                OrderManager.Instance.CompleteOrder();
+                            }
+                            else
+                            {
+                                Debug.Log("Toppings added but no active order exists!");
+                            }
+                        }
+                        else
+                        {
+                            Debug.Log("OrderManager instance not found!");
+                        }
+                    }
+
+                    return true; // Allow multiple toppings
                 }
                 break;
 
