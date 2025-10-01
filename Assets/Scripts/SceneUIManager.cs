@@ -43,8 +43,8 @@ public class SceneUIManager : MonoBehaviour
     public bool IsOnStartScreen =>
         startScreenCanvasGroup != null &&
         startScreenCanvasGroup.alpha > 0f;
-
-    // Scene switching (works from anywhere)
+    
+    // =========== Scene transitions ==============
     public void LoadMainScene()
     {
         Time.timeScale = 1f; // reset time

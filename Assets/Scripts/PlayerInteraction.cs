@@ -30,7 +30,8 @@ public class PlayerInteraction : MonoBehaviour
         // Save player’s current position before leaving MainScene
         if (zone != "Main") // only if we’re leaving Main
         {
-            var player = FindObjectOfType<PlayerMovement>();
+            var player = Object.FindFirstObjectByType<PlayerMovement>();
+            
             if (player != null)
             {
                 PlayerData.LastPosition = player.transform.position;

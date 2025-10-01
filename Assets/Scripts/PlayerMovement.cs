@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     {
         // Determine if player input should be active
         bool isActive = !(PauseManager.Instance != null && PauseManager.Instance.IsPaused)
-                        && !(FindObjectOfType<SceneUIManager>()?.IsOnStartScreen ?? false);
+                        && !(Object.FindFirstObjectByType<SceneUIManager>()?.IsOnStartScreen ?? false);
 
         if (!isActive)
         {
