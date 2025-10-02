@@ -65,9 +65,9 @@ public class PauseManager : MonoBehaviour
     public void QuitGame()
     {
         #if UNITY_EDITOR
-                EditorApplication.isPlaying = false;
+            EditorApplication.isPlaying = false;
         #else
-                    Application.Quit(); // Quit the application in a build
+            Application.Quit(); // Quit the application in a build
         #endif
     }
 
