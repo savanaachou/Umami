@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a56fd74c-240c-4927-867f-9e2d246ac5a8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Umami/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Umami/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ServingScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ServingScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CookingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CookingManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OrderManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OrderManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,15 +29,13 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9b2ca2197f604d0fab04dc1c0e8b15011f5a00/d5/d4a330cf/Object.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9b2ca2197f604d0fab04dc1c0e8b15011f5a00/e5/3f4b1e80/Vector3.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Art.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/CookingScene.unity" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/sacho/Desktop/Unity Projects/Umami/Assets/Scenes/CookingScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DraggableObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ServingButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/sachou/Desktop/Umami/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -150,6 +145,7 @@
       <workItem from="1759099308565" duration="15216000" />
       <workItem from="1759216229424" duration="2420000" />
       <workItem from="1759279040063" duration="15466000" />
+      <workItem from="1759343193656" duration="1603000" />
     </task>
     <task id="LOCAL-00001" summary="initial push">
       <option name="closed" value="true" />
