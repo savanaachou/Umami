@@ -1,9 +1,11 @@
+using System.Collections;
 using UnityEngine;
 
 public class CookingManager : MonoBehaviour
 {
     public GameObject recipeBookScreen;
     public Transform ramenBowl; // The transform where ingredients snap to
+    public Transform noodlePot;  // The pot for cooking noodles
 
     public enum RamenStep
     {
@@ -40,10 +42,19 @@ public class CookingManager : MonoBehaviour
             case RamenStep.AddNoodles:
                 if (ingredientType == "Noodles")
                 {
-                    SnapIngredient(ingredient);
-                    Debug.Log("Noodles added! Now add the broth.");
-                    currentStep = RamenStep.AddBroth;
-                    return true;
+                    DraggableObject noodle = ingredient.GetComponent<DraggableObject>();
+                    if (noodle.noodleState == DraggableObject.NoodleState.Cooked)
+                    {
+                        SnapIngredient(ingredient);
+                        Debug.Log("Noodles added! Now add the broth.");
+                        currentStep = RamenStep.AddBroth;
+                        return true;
+                    }
+                    else
+                    {
+                        Debug.Log("Noodles are not cooked yet! Put them in the pot first.");
+                        return false;
+                    }
                 }
                 break;
 
@@ -63,7 +74,6 @@ public class CookingManager : MonoBehaviour
                     SnapIngredient(ingredient);
                     Debug.Log("Topping added!");
 
-                    // ✅ Only mark the order complete if the player actually has an order
                     if (currentStep != RamenStep.Completed)
                     {
                         currentStep = RamenStep.Completed;
@@ -95,7 +105,7 @@ public class CookingManager : MonoBehaviour
         }
 
         Debug.Log("Cannot add " + ingredientType + " yet! Follow the order.");
-        return false; // Out-of-order ingredient
+        return false;
     }
 
     private void SnapIngredient(GameObject ingredient)
@@ -103,4 +113,48 @@ public class CookingManager : MonoBehaviour
         ingredient.transform.position = ramenBowl.position; // Snap to bowl
         ingredient.transform.SetParent(ramenBowl);           // Optional: parent to bowl
     }
+    
+    public void StartCookingNoodles(GameObject noodle)
+    {
+        DraggableObject draggable = noodle.GetComponent<DraggableObject>();
+        if (draggable.noodleState != DraggableObject.NoodleState.Raw) return;
+
+        draggable.noodleState = DraggableObject.NoodleState.Cooking;
+
+        // Track coroutine so we can stop it if noodle is removed
+        draggable.activeCooking = StartCoroutine(CookNoodlesCoroutine(draggable));
+    }
+
+    private IEnumerator CookNoodlesCoroutine(DraggableObject noodle)
+    {
+        Debug.Log("Cooking noodles...");
+
+        float cookTime = 10f;
+        float elapsed = 0f;
+
+        while (elapsed < cookTime)
+        {
+            // If noodle was moved out of the pot → cancel cooking
+            if (noodle.transform.parent != noodle.cookingManager.noodlePot)
+            {
+                Debug.Log("Noodle removed from pot, cooking canceled!");
+                noodle.noodleState = DraggableObject.NoodleState.Raw;
+                noodle.activeCooking = null;
+                yield break;
+            }
+
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        // Only finish if still in pot
+        if (noodle.transform.parent == noodle.cookingManager.noodlePot)
+        {
+            noodle.noodleState = DraggableObject.NoodleState.Cooked;
+            Debug.Log("Noodles are cooked! Drag them to the bowl.");
+        }
+
+        noodle.activeCooking = null;
+    }
+
 }
