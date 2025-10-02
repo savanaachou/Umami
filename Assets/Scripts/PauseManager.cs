@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEditor;
 
 public class PauseManager : MonoBehaviour
 {
@@ -59,6 +60,15 @@ public class PauseManager : MonoBehaviour
         isPaused = false;
         Time.timeScale = 1f;
         HidePauseScreen();
+    }
+    
+    public void QuitGame()
+    {
+        #if UNITY_EDITOR
+                EditorApplication.isPlaying = false;
+        #else
+                    Application.Quit(); // Quit the application in a build
+        #endif
     }
 
     private void ShowPauseScreen()
