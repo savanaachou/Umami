@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a56fd74c-240c-4927-867f-9e2d246ac5a8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Umami/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Umami/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PauseManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PauseManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,15 +25,16 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/savanaachou/Umami&quot;,
-    &quot;accountId&quot;: &quot;6276a3ab-180b-4c9b-8a5a-ce175adf0551&quot;
+    &quot;accountId&quot;: &quot;9a74c217-5d28-4e8b-8d47-6117ca3f00a2&quot;
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Art.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/sachou/Desktop/Umami/Assets/Scenes/CookingScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/sachou/Desktop/Umami/Assets/Scenes/CookingScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/CookingScene.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/sachou/Desktop/Umami/Assets/Scenes/CookingScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/sachou/Desktop/Umami/Assets/Scenes/CookingScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/sachou/Desktop/Umami/Assets/Scenes/MainScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/MainScene.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/sachou/Desktop/Umami/Assets/Scenes/MainScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DraggableObject.cs" root0="FORCE_HIGHLIGHTING" />
@@ -152,6 +152,8 @@
       <workItem from="1759216229424" duration="2420000" />
       <workItem from="1759279040063" duration="15466000" />
       <workItem from="1759343193656" duration="1603000" />
+      <workItem from="1759448290671" duration="471000" />
+      <workItem from="1759867880530" duration="715000" />
     </task>
     <task id="LOCAL-00001" summary="initial push">
       <option name="closed" value="true" />
@@ -289,7 +291,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759437393672</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="camera movement">
+      <option name="closed" value="true" />
+      <created>1759445382749</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1759445382749</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,7 +343,8 @@
     <MESSAGE value="added cooking noodles" />
     <MESSAGE value="changed collider geometry" />
     <MESSAGE value="implemented quitgame and added to buttons too" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented quitgame and added to buttons too" />
+    <MESSAGE value="camera movement" />
+    <option name="LAST_COMMIT_MESSAGE" value="camera movement" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
