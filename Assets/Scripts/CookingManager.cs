@@ -95,7 +95,7 @@ public class CookingManager : MonoBehaviour
                         }
                     }
 
-                    return true; // Allow multiple toppings
+                    return true;
                 }
                 break;
 
