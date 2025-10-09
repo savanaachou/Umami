@@ -31,17 +31,12 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Art.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/sachou/Desktop/Umami/Assets/Scenes/CookingScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/sachou/Desktop/Umami/Assets/Scenes/CookingScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/CookingScene.unity" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/sachou/Desktop/Umami/Assets/Scenes/CookingScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/sachou/Desktop/Umami/Assets/Scenes/MainScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/MainScene.unity" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/sachou/Desktop/Umami/Assets/Scenes/MainScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DraggableObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ServingButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/sachou/Desktop/Umami/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -153,7 +148,7 @@
       <workItem from="1759279040063" duration="15466000" />
       <workItem from="1759343193656" duration="1603000" />
       <workItem from="1759448290671" duration="471000" />
-      <workItem from="1759867880530" duration="715000" />
+      <workItem from="1759867880530" duration="1349000" />
     </task>
     <task id="LOCAL-00001" summary="initial push">
       <option name="closed" value="true" />
@@ -299,7 +294,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759445382749</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="added more temp assets">
+      <option name="closed" value="true" />
+      <created>1759902511993</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1759902511993</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,7 +347,8 @@
     <MESSAGE value="changed collider geometry" />
     <MESSAGE value="implemented quitgame and added to buttons too" />
     <MESSAGE value="camera movement" />
-    <option name="LAST_COMMIT_MESSAGE" value="camera movement" />
+    <MESSAGE value="added more temp assets" />
+    <option name="LAST_COMMIT_MESSAGE" value="added more temp assets" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
