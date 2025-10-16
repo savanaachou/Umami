@@ -6,21 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a56fd74c-240c-4927-867f-9e2d246ac5a8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Umami/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Umami/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CookingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CookingManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/bambooShoots.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/bambooShoots.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/beanSprout.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/beanSprout.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/chiliOil.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/chiliOil.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/corn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/corn.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/kakuni.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/kakuni.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/noriSeaweed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/noriSeaweed.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/woodEarMushroom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/woodEarMushroom.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +150,8 @@
       <workItem from="1759343193656" duration="1603000" />
       <workItem from="1759448290671" duration="471000" />
       <workItem from="1759867880530" duration="1349000" />
-      <workItem from="1760048820220" duration="988000" />
+      <workItem from="1760048820220" duration="1364000" />
+      <workItem from="1760589061026" duration="1853000" />
     </task>
     <task id="LOCAL-00001" summary="initial push">
       <option name="closed" value="true" />
@@ -326,7 +313,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760048902578</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="delete uneeded files">
+      <option name="closed" value="true" />
+      <created>1760050071236</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1760050071236</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -373,7 +368,8 @@
     <MESSAGE value="camera movement" />
     <MESSAGE value="added more temp assets" />
     <MESSAGE value="added ingredient to cooking screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="added ingredient to cooking screen" />
+    <MESSAGE value="delete uneeded files" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete uneeded files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
