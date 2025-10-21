@@ -1,7 +1,9 @@
 # Umami
 
 **IMPORTANT NOTE:** This game is still in the works, all information below may change
+
 **Genre:** Narrative-driven cyberpunk ramen shop simulation  
+
 **Platform:** Unity (2D)
 
 ---
