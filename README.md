@@ -1,6 +1,6 @@
 # Umami
 
-**IMPORTANT NOTE:** This game is still in the works, all information below may change
+**IMPORTANT NOTE:** This game is still in the works, any information below may change
 
 **Genre:** Narrative-driven cyberpunk ramen shop simulation  
 
