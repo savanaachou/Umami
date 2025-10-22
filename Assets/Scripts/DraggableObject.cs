@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class DraggableObject : MonoBehaviour
 {
-    public string ingredientType; // "Noodles", "Broth", "Topping"
     private Vector3 offset;
     private bool isDragging = false;
     private Vector3 startPos;
@@ -15,13 +14,21 @@ public class DraggableObject : MonoBehaviour
     }
     public NoodleState noodleState = NoodleState.Raw;
 
-    [HideInInspector] public Coroutine activeCooking; // store coroutine reference
+    [HideInInspector] public Coroutine activeCooking;
     [HideInInspector] public CookingManager cookingManager;
+
+    private Ingredient ingredient; // reference to Ingredient script
 
     void Start()
     {
         startPos = transform.position;
         cookingManager = Object.FindFirstObjectByType<CookingManager>();
+        ingredient = GetComponent<Ingredient>();
+
+        if (ingredient == null)
+        {
+            Debug.LogWarning("No Ingredient script found on " + gameObject.name);
+        }
     }
 
     void OnMouseDown()
@@ -29,8 +36,8 @@ public class DraggableObject : MonoBehaviour
         offset = transform.position - GetMouseWorldPos();
         isDragging = true;
 
-        // If dragging while cooking → cancel
-        if (ingredientType == "Noodles" && noodleState == NoodleState.Cooking)
+        // Cancel noodle cooking if being dragged mid-cook
+        if (ingredient != null && ingredient.type == Ingredient.IngredientType.Noodles && noodleState == NoodleState.Cooking)
         {
             if (activeCooking != null)
             {
@@ -53,27 +60,33 @@ public class DraggableObject : MonoBehaviour
     void OnMouseUp()
     {
         isDragging = false;
-
         var game = cookingManager;
+
+        if (ingredient == null)
+        {
+            transform.position = startPos;
+            return;
+        }
 
         // Dropped over bowl
         if (Vector3.Distance(transform.position, game.ramenBowl.position) < 1f)
         {
-            bool success = game.TryAddIngredient(gameObject, ingredientType);
+            bool success = game.TryAddIngredient(gameObject); // no more string arg
             if (!success) transform.position = startPos;
             return;
         }
 
-        // Dropped over pot
-        if (ingredientType == "Noodles" && Vector3.Distance(transform.position, game.noodlePot.position) < 1f)
+        // Dropped over pot (for noodles)
+        if (ingredient.type == Ingredient.IngredientType.Noodles &&
+            Vector3.Distance(transform.position, game.noodlePot.position) < 1f)
         {
-            transform.position = game.noodlePot.position; 
+            transform.position = game.noodlePot.position;
             transform.SetParent(game.noodlePot);
             game.StartCookingNoodles(gameObject);
             return;
         }
 
-        // Otherwise return to start
+        // Otherwise, return to start position
         transform.position = startPos;
     }
 
