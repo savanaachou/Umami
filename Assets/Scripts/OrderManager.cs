@@ -53,4 +53,21 @@ public class OrderManager : MonoBehaviour
         }
     }
     
+    public void ResetOrder()
+    {
+        HasActiveOrder = false;
+        IsOrderCompleted = false;
+        Debug.Log("Order reset. Ready for a new order!");
+    }
+    
+    public void MarkOrderIncomplete()
+    {
+        if (HasActiveOrder)
+        {
+            IsOrderCompleted = false;
+            Debug.Log("Ramen marked as incomplete. Finish it again to serve!");
+        }
+    }
+
+    
 }

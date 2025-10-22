@@ -233,4 +233,33 @@ public class CookingManager : MonoBehaviour
 
         noodle.activeCooking = null;
     }
+    
+    public void ResetRamen()
+    {
+        // Reset the step
+        currentStep = RamenStep.AddNoodles;
+
+        // Clear toppings and egg flag
+        currentToppings.Clear();
+        hasEgg = false;
+
+        // Reset all draggable ingredients in the scene
+        DraggableObject[] allIngredients = GameObject.FindObjectsByType<DraggableObject>(FindObjectsSortMode.None);
+        foreach (var ingredient in allIngredients)
+        {
+            ingredient.ResetToStart();
+        }
+        
+        // If the ramen was previously “finished”, we want the order to know it’s not completed
+        if (OrderManager.Instance != null && OrderManager.Instance.HasActiveOrder)
+        {
+            // Only unset the completed flag for this order, do not cancel the order itself
+            // Call a method in OrderManager to mark the order as incomplete
+            OrderManager.Instance.MarkOrderIncomplete();
+        }
+
+        Debug.Log("Ramen has been reset. Start over!");
+    }
+
+
 }

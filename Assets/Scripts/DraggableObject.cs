@@ -5,6 +5,8 @@ public class DraggableObject : MonoBehaviour
     private Vector3 offset;
     private bool isDragging = false;
     private Vector3 startPos;
+    private Vector3 startPosition;
+    private Quaternion startRotation;
 
     public enum NoodleState
     {
@@ -22,6 +24,11 @@ public class DraggableObject : MonoBehaviour
     void Start()
     {
         startPos = transform.position;
+
+        // Save reset position and rotation
+        startPosition = transform.position;
+        startRotation = transform.rotation;
+
         cookingManager = Object.FindFirstObjectByType<CookingManager>();
         ingredient = GetComponent<Ingredient>();
 
@@ -71,7 +78,7 @@ public class DraggableObject : MonoBehaviour
         // Dropped over bowl
         if (Vector3.Distance(transform.position, game.ramenBowl.position) < 1f)
         {
-            bool success = game.TryAddIngredient(gameObject); // no more string arg
+            bool success = game.TryAddIngredient(gameObject);
             if (!success) transform.position = startPos;
             return;
         }
@@ -95,5 +102,24 @@ public class DraggableObject : MonoBehaviour
         Vector3 mousePoint = Input.mousePosition;
         mousePoint.z = Camera.main.WorldToScreenPoint(transform.position).z;
         return Camera.main.ScreenToWorldPoint(mousePoint);
+    }
+
+    // --- NEW: Reset position and state ---
+    public void ResetToStart()
+    {
+        transform.SetParent(null);
+        transform.position = startPosition;
+        transform.rotation = startRotation;
+
+        // Reset noodle state if applicable
+        if (ingredient != null && ingredient.type == Ingredient.IngredientType.Noodles)
+        {
+            noodleState = NoodleState.Raw;
+            if (activeCooking != null)
+            {
+                cookingManager.StopCoroutine(activeCooking);
+                activeCooking = null;
+            }
+        }
     }
 }

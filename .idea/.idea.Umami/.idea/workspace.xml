@@ -9,6 +9,9 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/CookingScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CookingScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CookingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CookingManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/DraggableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DraggableObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OrderManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OrderManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +36,10 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Art.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Ingredients/BambooShoots.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/CookingScene.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/MainScene.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/sachou/Desktop/Umami/Assets/Scripts/CookingManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DraggableObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ingredient.cs" root0="FORCE_HIGHLIGHTING" />
@@ -72,7 +77,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.2.1f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.2.7f2\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;C:\Users\sacho\Desktop\Unity Projects\Umami&quot; -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\sacho\Desktop\Unity Projects\Umami" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -84,7 +89,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.2.1f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.2.7f2\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;C:\Users\sacho\Desktop\Unity Projects\Umami&quot; -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\sacho\Desktop\Unity Projects\Umami" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -154,7 +159,9 @@
       <workItem from="1759867880530" duration="1349000" />
       <workItem from="1760048820220" duration="1364000" />
       <workItem from="1760589061026" duration="6216000" />
-      <workItem from="1761096773093" duration="7696000" />
+      <workItem from="1761096773093" duration="7931000" />
+      <workItem from="1761108620472" duration="27000" />
+      <workItem from="1761108667224" duration="1778000" />
     </task>
     <task id="LOCAL-00001" summary="initial push">
       <option name="closed" value="true" />
@@ -332,7 +339,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760591338897</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="implement specifc recipies">
+      <option name="closed" value="true" />
+      <created>1761106704111</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1761106704111</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,7 +396,8 @@
     <MESSAGE value="added ingredient to cooking screen" />
     <MESSAGE value="delete uneeded files" />
     <MESSAGE value="prevent player from moving off the screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="prevent player from moving off the screen" />
+    <MESSAGE value="implement specifc recipies" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement specifc recipies" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
