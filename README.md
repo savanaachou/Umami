@@ -45,4 +45,4 @@
 ---
 
 ## Game Design Document
-[https://docs.google.com/document/d/1BGKgJ-bUJWSOtxXczhctp1HA-TLm4Yu0mjrRFHVEoMk/edit?usp=sharing]([url](https://docs.google.com/document/d/1BGKgJ-bUJWSOtxXczhctp1HA-TLm4Yu0mjrRFHVEoMk/edit?usp=sharing))
+[Document Link](https://docs.google.com/document/d/1BGKgJ-bUJWSOtxXczhctp1HA-TLm4Yu0mjrRFHVEoMk/edit?usp=sharing)
