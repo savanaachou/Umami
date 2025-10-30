@@ -43,3 +43,6 @@
 - Art and sound assets are placeholder; polish and final visuals planned for later iterations  
 
 ---
+
+## Game Design Document
+[Document Link](https://docs.google.com/document/d/1BGKgJ-bUJWSOtxXczhctp1HA-TLm4Yu0mjrRFHVEoMk/edit?usp=sharing)
