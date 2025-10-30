@@ -6,12 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="a56fd74c-240c-4927-867f-9e2d246ac5a8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Umami/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Umami/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Food/noodle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Food/noodle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/ramenBroth.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/ramenBroth.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/CookingScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CookingScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CookingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CookingManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DraggableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DraggableObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OrderManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OrderManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ingredient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ingredient.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +162,9 @@
       <workItem from="1760589061026" duration="6216000" />
       <workItem from="1761096773093" duration="7931000" />
       <workItem from="1761108620472" duration="27000" />
-      <workItem from="1761108667224" duration="1778000" />
+      <workItem from="1761108667224" duration="2421000" />
+      <workItem from="1761196587663" duration="854000" />
+      <workItem from="1761811626362" duration="1720000" />
     </task>
     <task id="LOCAL-00001" summary="initial push">
       <option name="closed" value="true" />
@@ -347,7 +350,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761106704111</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="added reset button">
+      <option name="closed" value="true" />
+      <created>1761110596793</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1761110596793</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,7 +408,8 @@
     <MESSAGE value="delete uneeded files" />
     <MESSAGE value="prevent player from moving off the screen" />
     <MESSAGE value="implement specifc recipies" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement specifc recipies" />
+    <MESSAGE value="added reset button" />
+    <option name="LAST_COMMIT_MESSAGE" value="added reset button" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -22,6 +22,8 @@ public class CookingManager : MonoBehaviour
     // Track added ingredients
     private List<Ingredient.IngredientName> currentToppings = new List<Ingredient.IngredientName>();
     private bool hasEgg = false; // All ramen must include egg
+    private Ingredient.IngredientName selectedBroth = Ingredient.IngredientName.None;
+
 
     void Start()
     {
@@ -63,7 +65,8 @@ public class CookingManager : MonoBehaviour
                 if (ing.type == Ingredient.IngredientType.Broth)
                 {
                     SnapIngredient(ingredient);
-                    Debug.Log("Broth added! Add your toppings.");
+                    selectedBroth = ing.nameID; // Track the broth type
+                    Debug.Log($"Broth added: {selectedBroth}. Add your toppings.");
                     currentStep = RamenStep.AddToppings;
                     return true;
                 }
@@ -141,8 +144,14 @@ public class CookingManager : MonoBehaviour
             return false;
         }
 
-        // Define recipe sets using enums
-        var tonkotsu = new HashSet<Ingredient.IngredientName>
+        if (selectedBroth == Ingredient.IngredientName.None)
+        {
+            Debug.Log("You need to add a broth!");
+            return false;
+        }
+
+        // Define topping sets
+        var tonkotsuToppings = new HashSet<Ingredient.IngredientName>
         {
             Ingredient.IngredientName.Chashu,
             Ingredient.IngredientName.WoodEarMushrooms,
@@ -150,7 +159,7 @@ public class CookingManager : MonoBehaviour
             Ingredient.IngredientName.BeanSprout
         };
 
-        var shoyu = new HashSet<Ingredient.IngredientName>
+        var shoyuToppings = new HashSet<Ingredient.IngredientName>
         {
             Ingredient.IngredientName.Kakuni,
             Ingredient.IngredientName.Nori,
@@ -158,7 +167,7 @@ public class CookingManager : MonoBehaviour
             Ingredient.IngredientName.BambooShoots
         };
 
-        var miso = new HashSet<Ingredient.IngredientName>
+        var misoToppings = new HashSet<Ingredient.IngredientName>
         {
             Ingredient.IngredientName.Chashu,
             Ingredient.IngredientName.Corn,
@@ -167,31 +176,41 @@ public class CookingManager : MonoBehaviour
 
         var added = new HashSet<Ingredient.IngredientName>(currentToppings);
 
-        // Check recipes
-        if (added.IsSupersetOf(tonkotsu))
+        // Check combination of broth + toppings
+        switch (selectedBroth)
         {
-            Debug.Log("You made Tonkotsu Ramen!");
-            return true;
+            case Ingredient.IngredientName.TonkotsuBroth:
+                if (added.IsSupersetOf(tonkotsuToppings))
+                {
+                    Debug.Log("You made Tonkotsu Ramen!");
+                    return true;
+                }
+                break;
+
+            case Ingredient.IngredientName.ShoyuBroth:
+                if (added.IsSupersetOf(shoyuToppings))
+                {
+                    Debug.Log("You made Shoyu Ramen!");
+                    return true;
+                }
+                break;
+
+            case Ingredient.IngredientName.MisoBroth:
+                if (added.IsSupersetOf(misoToppings))
+                {
+                    if (added.Contains(Ingredient.IngredientName.ChiliOil))
+                        Debug.Log("You made Spicy Miso Ramen!");
+                    else
+                        Debug.Log("You made Miso Ramen!");
+                    return true;
+                }
+                break;
         }
-        else if (added.IsSupersetOf(shoyu))
-        {
-            Debug.Log("You made Shoyu Ramen!");
-            return true;
-        }
-        else if (added.IsSupersetOf(miso))
-        {
-            if (added.Contains(Ingredient.IngredientName.ChiliOil))
-                Debug.Log("You made Spicy Miso Ramen!");
-            else
-                Debug.Log("You made Miso Ramen!");
-            return true;
-        }
-        else
-        {
-            Debug.Log("The toppings don't match any known recipe!");
-            return false;
-        }
+
+        Debug.Log("The toppings don't match the broth type!");
+        return false;
     }
+
 
     // ---- Cooking logic remains unchanged ----
 
@@ -242,6 +261,9 @@ public class CookingManager : MonoBehaviour
         // Clear toppings and egg flag
         currentToppings.Clear();
         hasEgg = false;
+        
+        // Clear broth type
+        selectedBroth = Ingredient.IngredientName.None;
 
         // Reset all draggable ingredients in the scene
         DraggableObject[] allIngredients = GameObject.FindObjectsByType<DraggableObject>(FindObjectsSortMode.None);

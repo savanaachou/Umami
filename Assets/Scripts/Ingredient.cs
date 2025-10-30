@@ -13,10 +13,13 @@ public class Ingredient : MonoBehaviour
     {
         None,
         // --- Noodles ---
-        Noodles,
+        CurlyNoodles,
+        StraightNoodles,
 
         // --- Broths ---
-        Broth,
+        TonkotsuBroth,
+        ShoyuBroth,
+        MisoBroth,
 
         // --- Toppings ---
         Chashu,
