@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2167115819228315746
+--- !u!1 &3138496531121354003
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2000735929409926972}
-  - component: {fileID: 4530688990861775567}
-  - component: {fileID: 5457386026729072369}
-  - component: {fileID: 8822506376311469030}
-  - component: {fileID: 1149361171114777773}
+  - component: {fileID: 9128486947316158521}
+  - component: {fileID: 6749405631297188386}
+  - component: {fileID: 7200722611540008780}
+  - component: {fileID: 7129445909005165401}
+  - component: {fileID: 8122473517471481477}
   m_Layer: 0
-  m_Name: BeanSprout
+  m_Name: NoodleCurly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2000735929409926972
+--- !u!4 &9128486947316158521
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2167115819228315746}
+  m_GameObject: {fileID: 3138496531121354003}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6, y: 2, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8, y: 3, z: 0}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4530688990861775567
+--- !u!212 &6749405631297188386
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2167115819228315746}
+  m_GameObject: {fileID: 3138496531121354003}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -82,24 +82,24 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 515eb2fda46b8e941b287d74fc4a6323, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7b02651c343503341a289ba9f43b727c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 6.5, y: 4.66}
+  m_Size: {x: 17.33, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5457386026729072369
+--- !u!114 &7200722611540008780
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2167115819228315746}
+  m_GameObject: {fileID: 3138496531121354003}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 221e988416e9e0645ac70d25ff93d138, type: 3}
@@ -107,13 +107,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DraggableObject
   noodleState: 0
   cookingManager: {fileID: 0}
---- !u!61 &8822506376311469030
+--- !u!61 &7129445909005165401
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2167115819228315746}
+  m_GameObject: {fileID: 3138496531121354003}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -141,29 +141,29 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.13009548, y: 0.23579842}
+  m_Offset: {x: 0.11739063, y: -0.04978633}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.91, y: 3.43}
-    newSize: {x: 6.5, y: 4.66}
+    oldSize: {x: 17.33, y: 10.8}
+    newSize: {x: 17.33, y: 10.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 4.528139, y: 2.852624}
+  m_Size: {x: 16.628595, y: 9.7396965}
   m_EdgeRadius: 0
---- !u!114 &1149361171114777773
+--- !u!114 &8122473517471481477
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2167115819228315746}
+  m_GameObject: {fileID: 3138496531121354003}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc130223402721a438c7335660575de4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
-  type: 2
-  nameID: 10
+  type: 0
+  nameID: 1

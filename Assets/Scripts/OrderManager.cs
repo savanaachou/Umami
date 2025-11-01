@@ -7,9 +7,16 @@ public class OrderManager : MonoBehaviour
     public bool HasActiveOrder { get; private set; }
     public bool IsOrderCompleted { get; private set; }
 
+    // Current order requirements
+    public Ingredient.IngredientName RequiredBroth { get; private set; }
+    public Ingredient.IngredientName RequiredNoodles { get; private set; }
+
+    // What the player actually made
+    public Ingredient.IngredientName CookedBroth { get; private set; }
+    public Ingredient.IngredientName CookedNoodles { get; private set; }
+
     void Awake()
     {
-        // Singleton pattern (keep one copy across scenes)
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -23,13 +30,20 @@ public class OrderManager : MonoBehaviour
     {
         HasActiveOrder = true;
         IsOrderCompleted = false;
-        Debug.Log("New order received: Customer wants ramen!");
+
+        // Randomly pick a broth and noodle type
+        RequiredBroth = GetRandomBroth();
+        RequiredNoodles = GetRandomNoodles();
+
+        Debug.Log($"New order received: Customer wants {RequiredBroth} Ramen with {RequiredNoodles}!");
     }
 
-    public void CompleteOrder()
+    public void CompleteOrder(Ingredient.IngredientName broth, Ingredient.IngredientName noodles)
     {
         if (HasActiveOrder)
         {
+            CookedBroth = broth;
+            CookedNoodles = noodles;
             IsOrderCompleted = true;
             Debug.Log("Ramen is cooked! Go serve it.");
         }
@@ -37,29 +51,40 @@ public class OrderManager : MonoBehaviour
 
     public void ServeOrder()
     {
-        if (HasActiveOrder && IsOrderCompleted)
+        if (!HasActiveOrder)
         {
-            Debug.Log("Order served successfully! Customer is happy.");
-            HasActiveOrder = false;
-            IsOrderCompleted = false;
+            Debug.Log("No order to serve!");
+            return;
         }
-        else if (HasActiveOrder && !IsOrderCompleted)
+
+        if (!IsOrderCompleted)
         {
             Debug.Log("You can’t serve yet, ramen isn’t ready!");
+            return;
+        }
+
+        // Check if the ramen matches the order
+        if (CookedBroth == RequiredBroth && CookedNoodles == RequiredNoodles)
+        {
+            Debug.Log($"Correct order! {RequiredBroth} Ramen with {RequiredNoodles} served. Customer is happy!");
         }
         else
         {
-            Debug.Log("No order to serve!");
+            Debug.Log($"Wrong order! You served {CookedBroth} Ramen with {CookedNoodles}, but they wanted {RequiredBroth} with {RequiredNoodles}. Customer is unhappy!");
         }
+
+        // Reset order state
+        HasActiveOrder = false;
+        IsOrderCompleted = false;
     }
-    
+
     public void ResetOrder()
     {
         HasActiveOrder = false;
         IsOrderCompleted = false;
         Debug.Log("Order reset. Ready for a new order!");
     }
-    
+
     public void MarkOrderIncomplete()
     {
         if (HasActiveOrder)
@@ -69,5 +94,22 @@ public class OrderManager : MonoBehaviour
         }
     }
 
-    
+    private Ingredient.IngredientName GetRandomBroth()
+    {
+        Ingredient.IngredientName[] broths = {
+            Ingredient.IngredientName.TonkotsuBroth,
+            Ingredient.IngredientName.ShoyuBroth,
+            Ingredient.IngredientName.MisoBroth
+        };
+        return broths[Random.Range(0, broths.Length)];
+    }
+
+    private Ingredient.IngredientName GetRandomNoodles()
+    {
+        Ingredient.IngredientName[] noodles = {
+            Ingredient.IngredientName.CurlyNoodles,
+            Ingredient.IngredientName.StraightNoodles
+        };
+        return noodles[Random.Range(0, noodles.Length)];
+    }
 }

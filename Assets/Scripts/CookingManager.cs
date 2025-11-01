@@ -22,6 +22,7 @@ public class CookingManager : MonoBehaviour
     // Track added ingredients
     private List<Ingredient.IngredientName> currentToppings = new List<Ingredient.IngredientName>();
     private bool hasEgg = false; // All ramen must include egg
+    private Ingredient.IngredientName selectedNoodles = Ingredient.IngredientName.None;
     private Ingredient.IngredientName selectedBroth = Ingredient.IngredientName.None;
 
 
@@ -52,7 +53,8 @@ public class CookingManager : MonoBehaviour
                     if (noodle.noodleState == DraggableObject.NoodleState.Cooked)
                     {
                         SnapIngredient(ingredient);
-                        Debug.Log("Noodles added! Now add the broth.");
+                        selectedNoodles = ing.nameID; // track noodle type
+                        Debug.Log($"Added {selectedNoodles}! Now add the broth.");
                         currentStep = RamenStep.AddBroth;
                         return true;
                     }
@@ -120,7 +122,7 @@ public class CookingManager : MonoBehaviour
 
             if (OrderManager.Instance != null && OrderManager.Instance.HasActiveOrder)
             {
-                OrderManager.Instance.CompleteOrder();
+                OrderManager.Instance.CompleteOrder(selectedBroth, selectedNoodles);
             }
             else
             {
@@ -137,16 +139,22 @@ public class CookingManager : MonoBehaviour
     private bool CheckRamenRecipe()
     {
         Debug.Log("Current toppings: " + string.Join(", ", currentToppings));
-
-        if (!hasEgg)
+        
+        if (selectedNoodles == Ingredient.IngredientName.None)
         {
-            Debug.Log("Every ramen needs an egg!");
+            Debug.Log("You need to add noodles!");
             return false;
         }
-
+        
         if (selectedBroth == Ingredient.IngredientName.None)
         {
             Debug.Log("You need to add a broth!");
+            return false;
+        }
+        
+        if (!hasEgg)
+        {
+            Debug.Log("Every ramen needs an egg!");
             return false;
         }
 
@@ -182,7 +190,7 @@ public class CookingManager : MonoBehaviour
             case Ingredient.IngredientName.TonkotsuBroth:
                 if (added.IsSupersetOf(tonkotsuToppings))
                 {
-                    Debug.Log("You made Tonkotsu Ramen!");
+                    Debug.Log($"You made Tonkotsu Ramen with {selectedNoodles}!");
                     return true;
                 }
                 break;
@@ -190,7 +198,7 @@ public class CookingManager : MonoBehaviour
             case Ingredient.IngredientName.ShoyuBroth:
                 if (added.IsSupersetOf(shoyuToppings))
                 {
-                    Debug.Log("You made Shoyu Ramen!");
+                    Debug.Log($"You made Shoyu Ramen with {selectedNoodles}!");
                     return true;
                 }
                 break;
@@ -199,9 +207,9 @@ public class CookingManager : MonoBehaviour
                 if (added.IsSupersetOf(misoToppings))
                 {
                     if (added.Contains(Ingredient.IngredientName.ChiliOil))
-                        Debug.Log("You made Spicy Miso Ramen!");
+                        Debug.Log($"You made Spicy Miso Ramen with {selectedNoodles}!");
                     else
-                        Debug.Log("You made Miso Ramen!");
+                        Debug.Log($"You made Miso Ramen with  {selectedNoodles}!");
                     return true;
                 }
                 break;
@@ -264,6 +272,9 @@ public class CookingManager : MonoBehaviour
         
         // Clear broth type
         selectedBroth = Ingredient.IngredientName.None;
+        
+        // clear noodle type
+        selectedNoodles = Ingredient.IngredientName.None;
 
         // Reset all draggable ingredients in the scene
         DraggableObject[] allIngredients = GameObject.FindObjectsByType<DraggableObject>(FindObjectsSortMode.None);
