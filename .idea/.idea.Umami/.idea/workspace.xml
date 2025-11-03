@@ -6,22 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a56fd74c-240c-4927-867f-9e2d246ac5a8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Umami/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Umami/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/BambooShoots.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/BambooShoots.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/BeanSprout.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/BeanSprout.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Broth.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Broth.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/ChashuPork.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/ChashuPork.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/ChiliOil.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/ChiliOil.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Corn.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Corn.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Egg.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Egg.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/GreenOnions.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/GreenOnions.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Kakuni.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/Kakuni.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/NoriSeaweed.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/NoriSeaweed.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/RamenNoodles.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/RamenNoodles.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/WoodEarMushroom.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredients/WoodEarMushroom.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CookingScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CookingScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ServingScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ServingScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CookingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CookingManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/OrderManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OrderManager.cs" afterDir="false" />
     </list>
@@ -57,6 +41,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ingredient.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/PlayerProfile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ServingButton.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
@@ -178,7 +163,8 @@
       <workItem from="1761196587663" duration="854000" />
       <workItem from="1761811626362" duration="7902000" />
       <workItem from="1761896054002" duration="759000" />
-      <workItem from="1761939223446" duration="2439000" />
+      <workItem from="1761939223446" duration="2479000" />
+      <workItem from="1762151096786" duration="5567000" />
     </task>
     <task id="LOCAL-00001" summary="initial push">
       <option name="closed" value="true" />
@@ -380,7 +366,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761813534288</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="now randomized orders with specific requests for broth and noodle type">
+      <option name="closed" value="true" />
+      <created>1761990733753</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1761990733753</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,7 +401,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="initial push" />
     <MESSAGE value="testing message" />
     <MESSAGE value="initial push to github" />
     <MESSAGE value="another test" />
@@ -432,7 +425,8 @@
     <MESSAGE value="implement specifc recipies" />
     <MESSAGE value="added reset button" />
     <MESSAGE value="multiple broth types with cooking with ramen" />
-    <option name="LAST_COMMIT_MESSAGE" value="multiple broth types with cooking with ramen" />
+    <MESSAGE value="now randomized orders with specific requests for broth and noodle type" />
+    <option name="LAST_COMMIT_MESSAGE" value="now randomized orders with specific requests for broth and noodle type" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

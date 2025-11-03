@@ -14,6 +14,20 @@ public class OrderManager : MonoBehaviour
     // What the player actually made
     public Ingredient.IngredientName CookedBroth { get; private set; }
     public Ingredient.IngredientName CookedNoodles { get; private set; }
+    
+    public bool RequiredIsSpicy { get; private set; }
+    public bool CookedIsSpicy { get; private set; }
+    
+    public float OrderTimer { get; private set; } = 0f; // elapsed time in seconds
+    private bool isTiming = false;
+    
+    void Update()
+    {
+        if (isTiming && HasActiveOrder && !IsOrderCompleted)
+        {
+            OrderTimer += Time.deltaTime; // increment by time since last frame
+        }
+    }
 
     void Awake()
     {
@@ -31,23 +45,41 @@ public class OrderManager : MonoBehaviour
         HasActiveOrder = true;
         IsOrderCompleted = false;
 
-        // Randomly pick a broth and noodle type
         RequiredBroth = GetRandomBroth();
         RequiredNoodles = GetRandomNoodles();
 
-        Debug.Log($"New order received: Customer wants {RequiredBroth} Ramen with {RequiredNoodles}!");
+        // Only Miso can be spicy (50% chance)
+        if (RequiredBroth == Ingredient.IngredientName.MisoBroth)
+        {
+            RequiredIsSpicy = Random.value > 0.5f;
+        }
+        else
+        {
+            RequiredIsSpicy = false;
+        }
+        
+        // Start the timer
+        OrderTimer = 0f;
+        isTiming = true;
+        Debug.Log("Timer Started");
+
+        string spiceText = RequiredIsSpicy ? "Spicy " : "";
+        Debug.Log($"New order received: Customer wants {spiceText}{RequiredBroth} Ramen with {RequiredNoodles}!");
     }
 
-    public void CompleteOrder(Ingredient.IngredientName broth, Ingredient.IngredientName noodles)
+
+    public void CompleteOrder(Ingredient.IngredientName broth, Ingredient.IngredientName noodles, bool isSpicy)
     {
         if (HasActiveOrder)
         {
             CookedBroth = broth;
             CookedNoodles = noodles;
+            CookedIsSpicy = isSpicy;
             IsOrderCompleted = true;
             Debug.Log("Ramen is cooked! Go serve it.");
         }
     }
+
 
     public void ServeOrder()
     {
@@ -63,25 +95,39 @@ public class OrderManager : MonoBehaviour
             return;
         }
 
-        // Check if the ramen matches the order
-        if (CookedBroth == RequiredBroth && CookedNoodles == RequiredNoodles)
+        bool brothMatch = CookedBroth == RequiredBroth;
+        bool noodleMatch = CookedNoodles == RequiredNoodles;
+        bool spiceMatch = CookedIsSpicy == RequiredIsSpicy;
+        
+        Debug.Log($" Time to complete order: {OrderTimer:F2} seconds."); 
+
+        if (brothMatch && noodleMatch && spiceMatch)
         {
-            Debug.Log($"Correct order! {RequiredBroth} Ramen with {RequiredNoodles} served. Customer is happy!");
+            string spiceText = RequiredIsSpicy ? "Spicy " : "";
+            Debug.Log($"Correct order! {spiceText}{RequiredBroth} Ramen with {RequiredNoodles} served. Customer is happy!");
         }
         else
         {
-            Debug.Log($"Wrong order! You served {CookedBroth} Ramen with {CookedNoodles}, but they wanted {RequiredBroth} with {RequiredNoodles}. Customer is unhappy!");
+            string expectedSpice = RequiredIsSpicy ? "Spicy " : "";
+            string servedSpice = CookedIsSpicy ? "Spicy " : "";
+            Debug.Log($"Wrong order! You served {servedSpice}{CookedBroth} Ramen with {CookedNoodles}, but they wanted {expectedSpice}{RequiredBroth} with {RequiredNoodles}. Customer is unhappy!");
         }
+
+        // Stop the timer
+        isTiming = false;
 
         // Reset order state
         HasActiveOrder = false;
         IsOrderCompleted = false;
+        OrderTimer = 0f; // optional reset
     }
+
 
     public void ResetOrder()
     {
         HasActiveOrder = false;
         IsOrderCompleted = false;
+        
         Debug.Log("Order reset. Ready for a new order!");
     }
 

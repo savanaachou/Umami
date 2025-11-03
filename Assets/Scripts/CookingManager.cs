@@ -7,6 +7,8 @@ public class CookingManager : MonoBehaviour
     public GameObject recipeBookScreen;
     public Transform ramenBowl;
     public Transform noodlePot;
+    
+    private bool isSpicy = false;
 
     public enum RamenStep
     {
@@ -122,7 +124,7 @@ public class CookingManager : MonoBehaviour
 
             if (OrderManager.Instance != null && OrderManager.Instance.HasActiveOrder)
             {
-                OrderManager.Instance.CompleteOrder(selectedBroth, selectedNoodles);
+                OrderManager.Instance.CompleteOrder(selectedBroth, selectedNoodles, isSpicy);
             }
             else
             {
@@ -138,6 +140,8 @@ public class CookingManager : MonoBehaviour
 
     private bool CheckRamenRecipe()
     {
+        isSpicy = currentToppings.Contains(Ingredient.IngredientName.ChiliOil);
+
         Debug.Log("Current toppings: " + string.Join(", ", currentToppings));
         
         if (selectedNoodles == Ingredient.IngredientName.None)
@@ -206,13 +210,16 @@ public class CookingManager : MonoBehaviour
             case Ingredient.IngredientName.MisoBroth:
                 if (added.IsSupersetOf(misoToppings))
                 {
-                    if (added.Contains(Ingredient.IngredientName.ChiliOil))
+                    isSpicy = added.Contains(Ingredient.IngredientName.ChiliOil);
+
+                    if (isSpicy)
                         Debug.Log($"You made Spicy Miso Ramen with {selectedNoodles}!");
                     else
-                        Debug.Log($"You made Miso Ramen with  {selectedNoodles}!");
+                        Debug.Log($"You made Miso Ramen with {selectedNoodles}!");
                     return true;
                 }
                 break;
+
         }
 
         Debug.Log("The toppings don't match the broth type!");
