@@ -34,7 +34,7 @@ public class PauseManager : MonoBehaviour
         {
             // Block pause if start screen is active
             SceneUIManager uiManager = Object.FindFirstObjectByType<SceneUIManager>();
-            if (uiManager != null && uiManager.IsOnStartScreen)
+            if (uiManager != null && (uiManager.IsOnStartScreen || uiManager.IsOnPlayerSetupScreen))
                 return;
 
             TogglePause();

@@ -14,7 +14,9 @@ public class PlayerInteraction : MonoBehaviour
 
     void Update()
     {
-        bool isInputAllowed = !(PauseManager.Instance?.IsPaused ?? false) && !(sceneUiManager?.IsOnStartScreen ?? false);
+        bool isInputAllowed = !(PauseManager.Instance?.IsPaused ?? false)
+                              && !(sceneUiManager?.IsOnStartScreen ?? false)
+                              && !(sceneUiManager?.IsOnPlayerSetupScreen ?? false); // <-- added
 
         if (!isInputAllowed)
             return;

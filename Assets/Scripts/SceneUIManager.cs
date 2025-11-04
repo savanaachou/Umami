@@ -3,8 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class SceneUIManager : MonoBehaviour
 {
-    [Header("Optional screens (per scene)")]
+    [Header("Screens)")]
     public CanvasGroup startScreenCanvasGroup;
+    public CanvasGroup playerSetupCanvasGroup;
 
     private CanvasGroup[] allScreens;
 
@@ -27,7 +28,6 @@ public class SceneUIManager : MonoBehaviour
             CanvasGroupDisplayer.Show(screenToShow);
     }
 
-    // Start screen helpers (used only in MainScene)
     public void ShowStartScreen()
     {
         if (startScreenCanvasGroup != null)
@@ -39,10 +39,26 @@ public class SceneUIManager : MonoBehaviour
         if (startScreenCanvasGroup != null)
             CanvasGroupDisplayer.Hide(startScreenCanvasGroup);
     }
+    
+    public void ShowPlayerSetupScreen()
+    {
+        if (playerSetupCanvasGroup != null)
+            ShowOnly(playerSetupCanvasGroup);
+    }
+
+    public void HidePlayerSetupScreen()
+    {
+        if (playerSetupCanvasGroup != null)
+            CanvasGroupDisplayer.Hide(playerSetupCanvasGroup);
+    }
 
     public bool IsOnStartScreen =>
         startScreenCanvasGroup != null &&
         startScreenCanvasGroup.alpha > 0f;
+    
+    public bool IsOnPlayerSetupScreen =>
+        playerSetupCanvasGroup != null &&
+        playerSetupCanvasGroup.alpha > 0f;
     
     // =========== Scene transitions ==============
     public void LoadMainScene()
