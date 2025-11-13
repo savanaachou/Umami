@@ -17,14 +17,33 @@ public class Player : MonoBehaviour
         movement = GetComponent<PlayerMovement>();
         interaction = GetComponent<PlayerInteraction>();
 
-        // Pass references down if needed
         interaction.sceneUiManager = sceneUiManager;
 
-        // Set the player sprite from the profile
-        if (playerProfile != null && spriteRenderer != null)
+        // Check everything before trying to log or use it
+        if (playerProfile == null)
+        {
+            Debug.LogWarning("PlayerProfile not assigned in Player script!");
+            return;
+        }
+
+        if (spriteRenderer == null)
+        {
+            spriteRenderer = GetComponent<SpriteRenderer>();
+            if (spriteRenderer == null)
+            {
+                Debug.LogWarning("SpriteRenderer missing on Player object!");
+                return;
+            }
+        }
+
+        if (playerProfile.playerSprite != null)
         {
             spriteRenderer.sprite = playerProfile.playerSprite;
             Debug.Log($"Player sprite set to: {spriteRenderer.sprite.name}");
+        }
+        else
+        {
+            Debug.Log("PlayerProfile has no sprite yet, waiting for selection.");
         }
     }
     

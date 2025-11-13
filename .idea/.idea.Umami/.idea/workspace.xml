@@ -6,15 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="a56fd74c-240c-4927-867f-9e2d246ac5a8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Umami/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Umami/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/character.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/character.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PauseManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PauseManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/recipe-book.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/recipe-book.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CookingScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CookingScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerInteraction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerInteraction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneUIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneUIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/femaleSprite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/femaleSprite.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/maleSprite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/maleSprite.png.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +44,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Resources/PlayerProfile.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/CookingScene.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/MainScene.unity" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/sachou/Desktop/Umami/Assets/Scripts/CookingManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DraggableObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ingredient.cs" root0="FORCE_HIGHLIGHTING" />
@@ -53,6 +51,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerSetupManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/PlayerProfile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ServingButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -189,7 +188,10 @@
       <workItem from="1761896054002" duration="759000" />
       <workItem from="1761939223446" duration="2479000" />
       <workItem from="1762151096786" duration="8952000" />
-      <workItem from="1762240029332" duration="4659000" />
+      <workItem from="1762240029332" duration="5290000" />
+      <workItem from="1762381600399" duration="433000" />
+      <workItem from="1762902314732" duration="1403000" />
+      <workItem from="1763020230928" duration="682000" />
     </task>
     <task id="LOCAL-00001" summary="initial push">
       <option name="closed" value="true" />
@@ -407,7 +409,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762157596207</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="new character selection screen, player can choose sprite and name">
+      <option name="closed" value="true" />
+      <created>1762244756419</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1762244756419</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -434,7 +444,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="initial push to github" />
     <MESSAGE value="another test" />
     <MESSAGE value="refactored files" />
     <MESSAGE value="start screen and player movement" />
@@ -459,7 +468,8 @@
     <MESSAGE value="multiple broth types with cooking with ramen" />
     <MESSAGE value="now randomized orders with specific requests for broth and noodle type" />
     <MESSAGE value="fix: not detecting between spicy vs not spicy for miso ramen" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: not detecting between spicy vs not spicy for miso ramen" />
+    <MESSAGE value="new character selection screen, player can choose sprite and name" />
+    <option name="LAST_COMMIT_MESSAGE" value="new character selection screen, player can choose sprite and name" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
