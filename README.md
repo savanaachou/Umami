@@ -9,7 +9,7 @@
 ---
 
 ## Overview
-*Under the Neon Sky* is a story-focused game where players run a late-night ramen shop in a neon-soaked cyberpunk city. Serve customers, cook dishes under time pressure, and navigate a web of secrets, gangs, and city intrigue. Player choices affect relationships with characters and the flavor of the ending, creating a rich narrative experience with replay value.
+*Umami* is a story-focused game where players run a late-night ramen shop in a neon-soaked cyberpunk city. Serve customers, cook dishes under time pressure, and navigate a web of secrets, gangs, and city intrigue. Player choices affect relationships with characters and the flavor of the ending, creating a rich narrative experience with replay value.
 
 ---
 
