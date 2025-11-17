@@ -1,3 +1,3 @@
-This is night 1
-Test
-End of night one
+"Ah, you’re ready to make my favorite ramen!"
+-> COOKING
+"Thanks! This looks delicious."
