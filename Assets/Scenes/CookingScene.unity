@@ -308,6 +308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
   startScreenCanvasGroup: {fileID: 0}
   playerSetupCanvasGroup: {fileID: 0}
+  recipeBookCanvasGroup: {fileID: 1622040302}
 --- !u!4 &290781455
 Transform:
   m_ObjectHideFlags: 0
@@ -1361,7 +1362,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1669497954}
-        m_TargetAssemblyTypeName: CookingGame, Assembly-CSharp
+        m_TargetAssemblyTypeName: CookingManager, Assembly-CSharp
         m_MethodName: ShowRecipeBook
         m_Mode: 1
         m_Arguments:
@@ -1421,6 +1422,7 @@ GameObject:
   - component: {fileID: 1622040299}
   - component: {fileID: 1622040301}
   - component: {fileID: 1622040300}
+  - component: {fileID: 1622040302}
   m_Layer: 5
   m_Name: RecipeScreen
   m_TagString: Untagged
@@ -1486,6 +1488,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1622040298}
   m_CullTransparentMesh: 1
+--- !u!225 &1622040302
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622040298}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1669497953
 GameObject:
   m_ObjectHideFlags: 0
@@ -1628,7 +1642,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1669497954}
-        m_TargetAssemblyTypeName: CookingGame, Assembly-CSharp
+        m_TargetAssemblyTypeName: CookingManager, Assembly-CSharp
         m_MethodName: HideRecipeBook
         m_Mode: 1
         m_Arguments:
