@@ -1,3 +1,3 @@
 "Ah, you’re ready to make my favorite ramen!"
--> COOKING
+#START_COOKING
 "Thanks! This looks delicious."

@@ -19,17 +19,23 @@ public class DialogueManager : MonoBehaviour
     
     private bool dialogueIsPlaying;
     private int? selectedChoiceIndex = null; // nullable, no choice selected initially
-
+    
+    private string savedStoryJson = "";
+    private bool storyFinished = false;
     
     private static DialogueManager instance;
 
     private void Awake()
     {
-        if (instance != null)
+        if (instance != null && instance != this)
         {
-            Debug.LogWarning("More than one instance of DialogueManager");
+            Debug.Log("More than one instance of DialogueManager detected — destroying the new one.");
+            Destroy(gameObject);  
+            return;
         }
+
         instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     public static DialogueManager GetInstance()
@@ -68,10 +74,22 @@ public class DialogueManager : MonoBehaviour
 
     public void EnterDialogueMode(TextAsset inkJSON)
     {
-        currentStory = new Story(inkJSON.text);
+        if (storyFinished)
+        {
+            Debug.Log("Dialogue already completed — skipping.");
+            return;
+        }
+
+        // Create story once or restore states
+        if (currentStory == null)
+            currentStory = new Story(inkJSON.text);
+
+        if (!string.IsNullOrEmpty(savedStoryJson))
+            currentStory.state.LoadJson(savedStoryJson);
+
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
-        
+
         ContinueStory();
     }
 
@@ -80,6 +98,10 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
+        
+        savedStoryJson = currentStory.state.ToJson();
+        if (!currentStory.canContinue && currentStory.currentChoices.Count == 0)
+            storyFinished = true;
     }
 
     private void ContinueStory()
@@ -98,9 +120,8 @@ public class DialogueManager : MonoBehaviour
         }
         if (currentStory.canContinue)
         {
-            // set text for the current idalogue line
             dialogueText.text = currentStory.Continue();
-            // display choices, if any, for this dialogue line
+            savedStoryJson = currentStory.state.ToJson();
             DisplayChoices();
         }
         else

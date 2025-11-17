@@ -7,20 +7,7 @@
     <list default="true" id="a56fd74c-240c-4927-867f-9e2d246ac5a8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/Assets/Narritive/Night1.ink" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Narritive/Night1.ink" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Narritive/Night1.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Narritive/Night1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ServingScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ServingScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CookingScripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CookingScripts/CookingManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CookingScripts/CookingManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CookingScripts/DraggableObject.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CookingScripts/DraggableObject.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CookingScripts/Ingredient.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CookingScripts/Ingredient.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CookingScripts/OrderManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CookingScripts/OrderManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CookingScripts/ServingButton.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CookingScripts/ServingButton.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DialogueManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DialogueManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +40,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Resources/PlayerProfile.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/CookingScene.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/MainScene.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Cooking.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/sachou/Desktop/Umami/Assets/Scripts/ScriptableObjects/CharacterProfile.cs" root0="SKIP_HIGHLIGHTING" />
@@ -200,7 +188,7 @@
       <workItem from="1763020230928" duration="3294000" />
       <workItem from="1763068808499" duration="1945000" />
       <workItem from="1763081039993" duration="7493000" />
-      <workItem from="1763354005749" duration="13306000" />
+      <workItem from="1763354005749" duration="16226000" />
     </task>
     <task id="LOCAL-00001" summary="initial push">
       <option name="closed" value="true" />
@@ -442,7 +430,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763356727058</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="implement base dialogue function">
+      <option name="closed" value="true" />
+      <created>1763368633494</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1763368633494</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -469,7 +465,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="start screen and player movement" />
     <MESSAGE value="added colliders for cooking, servign, and exit. also pause screen panel (not implemented yet)" />
     <MESSAGE value="fixed panel issue aand refactored code to be better" />
     <MESSAGE value="implemented different scenes instead of panels, implemented pause screen which actually works!" />
@@ -494,7 +489,8 @@
     <MESSAGE value="new character selection screen, player can choose sprite and name" />
     <MESSAGE value="added recipe book and created Scriptable Objects for dialogue" />
     <MESSAGE value="added npc character profiles, with base relation, order preferance etc" />
-    <option name="LAST_COMMIT_MESSAGE" value="added npc character profiles, with base relation, order preferance etc" />
+    <MESSAGE value="implement base dialogue function" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement base dialogue function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
