@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a4fecc633e1b9d459180837670869e0, type: 3}
-  m_Name: KazProfile
+  m_Name: Kaz
   m_EditorClassIdentifier: Assembly-CSharp::CharacterProfile
   characterName: Kaz Nakamura
   portrait: {fileID: 0}

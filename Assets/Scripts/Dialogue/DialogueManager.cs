@@ -10,6 +10,7 @@ public class DialogueManager : MonoBehaviour
     [Header("UI Elements")]
     [SerializeField]private TextMeshProUGUI dialogueText;
     [SerializeField] private GameObject dialoguePanel;
+    [SerializeField] private CanvasGroup dialogueCanvasGroup;
 
     [Header("Choices UI")] [SerializeField]
     private GameObject[] choices;
@@ -42,12 +43,10 @@ public class DialogueManager : MonoBehaviour
     {
         return instance;
     }
-
     
     private void Start()
     {
-        // dialogueIsPlaying = false;
-        // dialoguePanel.SetActive(false);
+        HideDialogue();
         
         choicesText = new TextMeshProUGUI[choices.Length];
         int index = 0;
@@ -88,15 +87,14 @@ public class DialogueManager : MonoBehaviour
             currentStory.state.LoadJson(savedStoryJson);
 
         dialogueIsPlaying = true;
-        dialoguePanel.SetActive(true);
+        ShowDialogue();
 
         ContinueStory();
     }
 
     private void ExitDialogueMode()
     {
-        dialogueIsPlaying = false;
-        dialoguePanel.SetActive(false);
+        HideDialogue();
         dialogueText.text = "";
         
         savedStoryJson = currentStory.state.ToJson();
@@ -121,6 +119,7 @@ public class DialogueManager : MonoBehaviour
         if (currentStory.canContinue)
         {
             dialogueText.text = currentStory.Continue();
+            HandleStoryTags(currentStory.currentTags);
             savedStoryJson = currentStory.state.ToJson();
             DisplayChoices();
         }
@@ -154,6 +153,57 @@ public class DialogueManager : MonoBehaviour
             choices[i].gameObject.SetActive(false);
         }
 
+    }
+    
+    private void HandleStoryTags(List<string> tags)
+    {
+        foreach (string tag in tags)
+        {
+            if (tag.StartsWith("order:"))
+            {
+                string characterName = tag.Substring("order:".Length);
+                CharacterProfile npc = Resources.Load<CharacterProfile>($"CharacterProfiles/{characterName}");
+
+                if (npc != null)
+                {
+                    Debug.Log("Ordered recieved");
+                    OrderManager.Instance.TakeStoryOrder(npc);
+                    savedStoryJson = currentStory.state.ToJson();
+                    ExitDialogueMode();
+                }
+                else
+                {
+                    Debug.LogError("No CharacterProfile found for: " + characterName);
+                }
+                
+            }
+            else if (tag.StartsWith("serve:"))
+            {
+                string characterName = tag.Substring("serve:".Length);
+                CharacterProfile npc = Resources.Load<CharacterProfile>($"CharacterProfiles/{characterName}");
+
+                if (npc != null && OrderManager.Instance.HasActiveOrder)
+                {
+                    OrderManager.Instance.ServeOrder();
+                }
+            }
+        }
+    }
+    
+    private void ShowDialogue()
+    {
+        dialogueCanvasGroup.alpha = 1f;         // make visible
+        dialogueCanvasGroup.interactable = true; // allow buttons/interactions
+        dialogueCanvasGroup.blocksRaycasts = true; // receive clicks
+        dialogueIsPlaying = true;
+    }
+
+    private void HideDialogue()
+    {
+        dialogueCanvasGroup.alpha = 0f;           // invisible
+        dialogueCanvasGroup.interactable = false; // block interactions
+        dialogueCanvasGroup.blocksRaycasts = false; // ignore clicks
+        dialogueIsPlaying = false;
     }
     
     public void MakeChoice(int choiceIndex)

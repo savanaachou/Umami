@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a4fecc633e1b9d459180837670869e0, type: 3}
-  m_Name: SaekoProfile
+  m_Name: Aya
   m_EditorClassIdentifier: Assembly-CSharp::CharacterProfile
-  characterName: Saeko Hayami
+  characterName: Aya Morinaga
   portrait: {fileID: 0}
   baseRelationship: 0
-  signatureRamen: {fileID: 11400000, guid: 31db88fea6a197c4bbf7c1e0e6d79987, type: 2}
-  preferredNoodles: 2
+  signatureRamen: {fileID: 11400000, guid: 5980eafbdffb5be4fbb78df5c3a5f1f9, type: 2}
+  preferredNoodles: 1
+  prefersSpicyMiso: 1
+  acceptsAnyRamen: 0

@@ -6,19 +6,15 @@ public class DialogueTrigger : MonoBehaviour
     [Header("Ink Story to Play")]
     public TextAsset inkJSON;
 
-    private bool dialogueStarted = false;
-
-    private void Start()
-    {
-        // Automatically start dialogue when the scene loads
-        StartDialogue();
-    }
-
+    // Called by a button
     public void StartDialogue()
     {
-        if (dialogueStarted || inkJSON == null) return;
+        if (inkJSON == null)
+        {
+            Debug.LogError("No Ink JSON assigned to DialogueTrigger!");
+            return;
+        }
 
-        dialogueStarted = true;
         DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
     }
 }

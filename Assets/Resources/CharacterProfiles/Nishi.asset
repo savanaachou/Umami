@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a4fecc633e1b9d459180837670869e0, type: 3}
-  m_Name: KaenProfile
+  m_Name: Nishi
   m_EditorClassIdentifier: Assembly-CSharp::CharacterProfile
-  characterName: Kaen Mori
+  characterName: Mr. Nishi Watanabe
   portrait: {fileID: 0}
   baseRelationship: 0
-  signatureRamen: {fileID: 0}
-  preferredNoodles: 0
+  signatureRamen: {fileID: 11400000, guid: 5980eafbdffb5be4fbb78df5c3a5f1f9, type: 2}
+  preferredNoodles: 2
   prefersSpicyMiso: 0
-  acceptsAnyRamen: 1
+  acceptsAnyRamen: 0

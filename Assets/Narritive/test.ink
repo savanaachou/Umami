@@ -1,5 +1,8 @@
 This is night 1.
 Test
+Test1
+Test2
+Test3
 Choose one:
 
 + [Choice 1] -> choice1
