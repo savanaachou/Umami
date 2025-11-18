@@ -6,25 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a56fd74c-240c-4927-867f-9e2d246ac5a8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Umami/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Umami/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Narritive/Night1.ink" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Narritive/Night1.ink" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Narritive/Night1.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Narritive/Night1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Narritive/test.ink" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Narritive/test.ink" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Narritive/test.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Narritive/test.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/CharacterProfiles/AkiProfile.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/CharacterProfiles/AkiProfile.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/CharacterProfiles/AyaProfile.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/CharacterProfiles/AyaProfile.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/CharacterProfiles/KaenProfile.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/CharacterProfiles/KaenProfile.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/CharacterProfiles/KazProfile.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/CharacterProfiles/KazProfile.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/CharacterProfiles/NishiProfile.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/CharacterProfiles/NishiProfile.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/CharacterProfiles/SaekoProfile.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/CharacterProfiles/SaekoProfile.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/ServingScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ServingScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueTrigger.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +15,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dialogue-test" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
@@ -82,7 +70,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "dialogue-test",
+    "git-widget-placeholder": "master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -454,7 +442,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763368633494</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="orders in dialogue">
+      <option name="closed" value="true" />
+      <created>1763455861941</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1763455861941</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -481,7 +477,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="added colliders for cooking, servign, and exit. also pause screen panel (not implemented yet)" />
     <MESSAGE value="fixed panel issue aand refactored code to be better" />
     <MESSAGE value="implemented different scenes instead of panels, implemented pause screen which actually works!" />
     <MESSAGE value="save players location when changing scene, worked on back button for cooking scene" />
@@ -506,7 +501,8 @@
     <MESSAGE value="added recipe book and created Scriptable Objects for dialogue" />
     <MESSAGE value="added npc character profiles, with base relation, order preferance etc" />
     <MESSAGE value="implement base dialogue function" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement base dialogue function" />
+    <MESSAGE value="orders in dialogue" />
+    <option name="LAST_COMMIT_MESSAGE" value="orders in dialogue" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

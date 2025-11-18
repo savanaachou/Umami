@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Ink.Runtime;
-using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -37,6 +37,13 @@ public class DialogueManager : MonoBehaviour
 
         instance = this;
         DontDestroyOnLoad(gameObject);
+        
+        // Find CanvasGroup automatically in children
+        if (dialogueCanvasGroup == null)
+            dialogueCanvasGroup = GetComponentInChildren<CanvasGroup>();
+    
+        if (dialogueCanvasGroup == null)
+            Debug.LogError("DialogueManager: No CanvasGroup found in children!");
     }
 
     public static DialogueManager GetInstance()
@@ -56,7 +63,6 @@ public class DialogueManager : MonoBehaviour
             index++;
         }
     }
-    
 
     private void Update()
     {
@@ -88,7 +94,6 @@ public class DialogueManager : MonoBehaviour
 
         dialogueIsPlaying = true;
         ShowDialogue();
-
         ContinueStory();
     }
 
