@@ -18,8 +18,7 @@ Saeko: “You’ve been away a long time?”
 
 {playerName}: “…Something like that.”
 
-Saeko: *tilts head, slightly amused*  
-“So that explains it. You’ve got the look of someone who doesn’t know what kind of mess the city’s in now.”
+Saeko: *tilts head, slightly amused* “So that explains it. You’ve got the look of someone who doesn’t know what kind of mess the city’s in now.”
 
 She steps closer, sliding onto a stool. She orders Shoyu Ramen with thin straight noodles, the way someone orders something familiar, not random.
 
@@ -67,8 +66,6 @@ Saeko looks at you, not unkindly, but assessing.
 Saeko begins eating quietly.  
 
 She glances between the window and you, thoughtful, like she’s measuring the atmosphere… and the person running it.
-
-After a moment:
 
 Saeko: “You seem steady. Capable. The kind of person who can handle delicate matters.”
 

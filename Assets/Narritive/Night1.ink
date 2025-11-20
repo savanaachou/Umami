@@ -82,6 +82,8 @@ Kaen: *chuckles* "Not quite. Just a hungry old man with an empty stomach and a s
 
 {playerName}: *nods* "What do you want?"
 
+He takes a seat
+
 Kaen: "Chef’s choice."
 
 -> begin_kaen_cooking
@@ -135,7 +137,6 @@ Kaen: "Quiet place you’ve got here. City outside’s louder than it’s ever b
 He stands, leaving enough cash. He turns toward the door, pausing in the doorway.
 
 Kaen: "Lock up early. Places like this attract ghosts before customers."
-
 
 Kaen: *He nods, faint smile.* "See you around."
 
