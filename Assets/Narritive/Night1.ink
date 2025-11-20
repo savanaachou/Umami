@@ -1,5 +1,4 @@
-VAR playerName = "Player"
-
+VAR playerName = ""
 
 You flip on the lights — flickering neon hums, dust drifting through the air. The counter still smells faintly of soy and smoke.
 

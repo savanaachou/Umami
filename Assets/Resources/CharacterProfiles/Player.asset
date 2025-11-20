@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22471c36dc748e24ca3b5f24907f5717, type: 3}
-  m_Name: PlayerProfile
+  m_Name: Player
   m_EditorClassIdentifier: Assembly-CSharp::PlayerProfile
   playerName: Savana
   playerSprite: {fileID: 21300000, guid: 7a62b33f4e4b75c43a91f808ecd244c8, type: 3}

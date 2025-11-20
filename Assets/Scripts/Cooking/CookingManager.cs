@@ -301,5 +301,4 @@ public class CookingManager : MonoBehaviour
         Debug.Log("Ramen has been reset. Start over!");
     }
 
-
 }

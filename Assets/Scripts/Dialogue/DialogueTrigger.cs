@@ -9,12 +9,15 @@ public class DialogueTrigger : MonoBehaviour
     // Called by a button
     public void StartDialogue()
     {
+        var inkJSON = NightManager.Instance.GetCurrentInk();
+
         if (inkJSON == null)
         {
-            Debug.LogError("No Ink JSON assigned to DialogueTrigger!");
+            Debug.LogError("No Ink JSON assigned for this night!");
             return;
         }
 
         DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
     }
+
 }

@@ -137,7 +137,8 @@ public class OrderManager : MonoBehaviour
         // NPC That Accepts ANY Ramen
         if (activeCharacter != null && activeCharacter.acceptsAnyRamen)
         {
-            Debug.Log($"{activeCharacter.characterName} happily accepts whatever you made!");
+            RelationshipManager.Instance.AddRelationship(activeCharacter, 1);
+            Debug.Log($"{activeCharacter.characterName} happily accepts whatever you made! Relationship increased by +1");
             ResetOrder();
             return;
         }

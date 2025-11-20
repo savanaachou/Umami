@@ -26,6 +26,8 @@ public class DialogueManager : MonoBehaviour
     private bool storyFinished = false;
     
     private static DialogueManager instance;
+    
+    public bool StoryFinished => storyFinished;
 
     private void Awake()
     {
@@ -82,7 +84,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (storyFinished)
         {
-            Debug.Log("Dialogue already completed, skipping.");
+            Debug.Log("Dialogue already completed.");
             return;
         }
 
@@ -261,5 +263,13 @@ public class DialogueManager : MonoBehaviour
     {
         ContinueStory();
     }
+    
+    public void ResetForNewNight()
+    {
+        currentStory = null;
+        savedStoryJson = "";
+        storyFinished = false;
+    }
+
 
 }

@@ -6,7 +6,6 @@ public class SceneUIManager : MonoBehaviour
     [Header("Screens)")]
     public CanvasGroup startScreenCanvasGroup;
     public CanvasGroup playerSetupCanvasGroup;
-    public CanvasGroup recipeBookCanvasGroup;
 
     private CanvasGroup[] allScreens;
 
@@ -52,20 +51,6 @@ public class SceneUIManager : MonoBehaviour
         if (playerSetupCanvasGroup != null)
             CanvasGroupDisplayer.Hide(playerSetupCanvasGroup);
     }
-
-    /*
-    public void ShowRecipeBook()
-    {
-        if(recipeBookCanvasGroup != null)
-            ShowOnly(recipeBookCanvasGroup);
-    }
-    public void HideRecipeBook()
-    {
-       if (recipeBookCanvasGroup != null)
-           CanvasGroupDisplayer.Hide(recipeBookCanvasGroup);
-    }
-    
-    */
 
     public bool IsOnStartScreen =>
         startScreenCanvasGroup != null &&
