@@ -151,6 +151,13 @@ public class OrderManager : MonoBehaviour
         {
             string spiceText = RequiredIsSpicy ? "Spicy " : "";
             Debug.Log($"Correct order! {spiceText}{RequiredBroth} with {RequiredNoodles} served. Customer happy!");
+            
+            if (activeCharacter != null)
+            {
+                RelationshipManager.Instance.AddRelationship(activeCharacter, 1);
+                Debug.Log($"{activeCharacter.characterName} relationship increased by +1 from correct ramen!");
+            }
+
         }
         else
         {

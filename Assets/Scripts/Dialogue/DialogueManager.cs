@@ -17,6 +17,7 @@ public class DialogueManager : MonoBehaviour
     private TextMeshProUGUI[] choicesText;
     
     private Story currentStory;
+    public PlayerProfile playerProfile;
     
     private bool dialogueIsPlaying;
     private int? selectedChoiceIndex = null; // nullable, no choice selected initially
@@ -30,7 +31,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (instance != null && instance != this)
         {
-            Debug.Log("More than one instance of DialogueManager detected — destroying the new one.");
+            Debug.Log("More than one instance of DialogueManager detected, destroying the new one.");
             Destroy(gameObject);  
             return;
         }
@@ -81,16 +82,33 @@ public class DialogueManager : MonoBehaviour
     {
         if (storyFinished)
         {
-            Debug.Log("Dialogue already completed — skipping.");
+            Debug.Log("Dialogue already completed, skipping.");
             return;
         }
 
+        // If there is a story order AND it's not complete → do NOT show dialogue at all
+        if (OrderManager.Instance != null &&
+            OrderManager.Instance.HasActiveOrder &&
+            !OrderManager.Instance.IsOrderCompleted)
+        {
+            Debug.Log("Cannot enter dialogue, order is not finished!");
+            return;
+        }
+        
         // Create story once or restore states
         if (currentStory == null)
             currentStory = new Story(inkJSON.text);
 
         if (!string.IsNullOrEmpty(savedStoryJson))
             currentStory.state.LoadJson(savedStoryJson);
+        
+        // Set the player's name variable
+        
+        if (playerProfile != null)
+        {
+            currentStory.variablesState["playerName"] = playerProfile.playerName;
+            Debug.Log("Ink playerName set to: " + currentStory.variablesState["playerName"]);
+        }
 
         dialogueIsPlaying = true;
         ShowDialogue();
@@ -164,6 +182,27 @@ public class DialogueManager : MonoBehaviour
     {
         foreach (string tag in tags)
         {
+            if (tag.StartsWith("rel:"))
+            {
+                string[] parts = tag.Replace("rel:", "").Trim().Split(' ');
+
+                string characterName = parts[0];
+                int amount = int.Parse(parts[1]);
+
+                // Load the CharacterProfile from Resources/CharacterProfiles/
+                CharacterProfile npc = Resources.Load<CharacterProfile>($"CharacterProfiles/{characterName}");
+
+                if (npc != null)
+                {
+                    RelationshipManager.Instance.AddRelationship(npc, amount);
+                    Debug.Log($"Relationship change: {characterName} +{amount}");
+                }
+                else
+                {
+                    Debug.LogError($"CharacterProfile not found for name: {characterName}");
+                }
+            }
+
             if (tag.StartsWith("order:"))
             {
                 string characterName = tag.Substring("order:".Length);
