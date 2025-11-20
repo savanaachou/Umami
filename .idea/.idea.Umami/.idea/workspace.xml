@@ -6,8 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="a56fd74c-240c-4927-867f-9e2d246ac5a8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Umami/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Umami/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Background/Untitled design (3).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Background/Untitled design (3).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Background/mainBackground.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Background/mainBackground.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Background/mainBackground.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Background/mainBackground.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/CookingScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CookingScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/OutsideScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/OutsideScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ServingScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ServingScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,6 +206,7 @@
       <workItem from="1763464734484" duration="926000" />
       <workItem from="1763500372845" duration="16510000" />
       <workItem from="1763620051239" duration="10248000" />
+      <workItem from="1763642296521" duration="4477000" />
     </task>
     <task id="LOCAL-00001" summary="initial push">
       <option name="closed" value="true" />
@@ -481,7 +488,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763627337202</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="changed art assets and added dialogue for second night">
+      <option name="closed" value="true" />
+      <created>1763642351456</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1763642351456</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -508,7 +523,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="added bowl in cooking scene" />
     <MESSAGE value="workspace" />
     <MESSAGE value="added cooking book, fixed errors" />
     <MESSAGE value="implemented draggble object for ramen" />
@@ -533,7 +547,8 @@
     <MESSAGE value="fixed null references" />
     <MESSAGE value="added player name to dialogue and some art/background" />
     <MESSAGE value="implemented to continue to the next night" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented to continue to the next night" />
+    <MESSAGE value="changed art assets and added dialogue for second night" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed art assets and added dialogue for second night" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
