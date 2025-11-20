@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a56fd74c-240c-4927-867f-9e2d246ac5a8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Narritive/Night1.ink" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Narritive/Night1.ink" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Narritive/Night1.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Narritive/Night1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Narritive/Night2.ink" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Narritive/Night2.ink" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Narritive/Night2.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Narritive/Night2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Umami/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Umami/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CookingScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CookingScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/OutsideScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/OutsideScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +46,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Resources/CharacterProfiles/Aki.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/sachou/Desktop/Umami/Assets/Scenes/CookingScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/CookingScene.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/sachou/Desktop/Umami/Assets/Scenes/MainScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/MainScene.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Cooking.meta" root0="FORCE_HIGHLIGHTING" />
@@ -201,7 +201,7 @@
       <workItem from="1763464734484" duration="926000" />
       <workItem from="1763500372845" duration="16510000" />
       <workItem from="1763620051239" duration="10248000" />
-      <workItem from="1763642296521" duration="5284000" />
+      <workItem from="1763642296521" duration="6504000" />
     </task>
     <task id="LOCAL-00001" summary="initial push">
       <option name="closed" value="true" />
@@ -499,7 +499,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763678570616</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="dialogue fixes and more art">
+      <option name="closed" value="true" />
+      <created>1763680670299</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1763680670299</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -526,7 +534,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="added cooking book, fixed errors" />
     <MESSAGE value="implemented draggble object for ramen" />
     <MESSAGE value="added cooking noodles" />
     <MESSAGE value="changed collider geometry" />
@@ -551,7 +558,8 @@
     <MESSAGE value="implemented to continue to the next night" />
     <MESSAGE value="changed art assets and added dialogue for second night" />
     <MESSAGE value="added more art" />
-    <option name="LAST_COMMIT_MESSAGE" value="added more art" />
+    <MESSAGE value="dialogue fixes and more art" />
+    <option name="LAST_COMMIT_MESSAGE" value="dialogue fixes and more art" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
