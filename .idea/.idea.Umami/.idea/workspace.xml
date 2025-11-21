@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a56fd74c-240c-4927-867f-9e2d246ac5a8" name="Changes" comment="" />
+    <list default="true" id="a56fd74c-240c-4927-867f-9e2d246ac5a8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Umami/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Umami/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -210,7 +212,7 @@
       <workItem from="1763464734484" duration="926000" />
       <workItem from="1763500372845" duration="16510000" />
       <workItem from="1763620051239" duration="10248000" />
-      <workItem from="1763642296521" duration="11041000" />
+      <workItem from="1763642296521" duration="13055000" />
     </task>
     <task id="LOCAL-00001" summary="initial push">
       <option name="closed" value="true" />
@@ -532,7 +534,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763688481352</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="fixed debug log canvas scale">
+      <option name="closed" value="true" />
+      <created>1763699499465</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1763699499465</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -559,7 +569,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="changed collider geometry" />
     <MESSAGE value="implemented quitgame and added to buttons too" />
     <MESSAGE value="camera movement" />
     <MESSAGE value="added more temp assets" />
@@ -584,7 +593,8 @@
     <MESSAGE value="dialogue fixes and more art" />
     <MESSAGE value="screen fitting size" />
     <MESSAGE value="added debug log displayer" />
-    <option name="LAST_COMMIT_MESSAGE" value="added debug log displayer" />
+    <MESSAGE value="fixed debug log canvas scale" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed debug log canvas scale" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
